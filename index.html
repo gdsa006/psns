@@ -49,6 +49,27 @@
             background-color: #1aa8a8; /* Darker shade for hover effect */
             border-color: #1aa8a8;
         }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .company-icon {
+                max-width: 100px;
+            }
+            .btn-primary, .btn-success {
+                padding: 15px 30px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .company-icon {
+                max-width: 80px;
+            }
+            .btn-primary, .btn-success {
+                padding: 12px 24px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
