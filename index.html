@@ -17,10 +17,24 @@
         .content {
             text-align: center;
         }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
         .btn-primary, .btn-success {
             padding: 20px 40px;
             font-size: 24px;
-            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -30,10 +44,22 @@
         <p class="lead">Explore our services:</p>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <a href="import-export.html" class="btn btn-primary btn-lg btn-block">Import & Export</a>
+                <div class="card mb-4">
+                    <img src="path/to/import-export-image.jpg" class="card-img-top" alt="Import & Export">
+                    <div class="card-body">
+                        <h5 class="card-title">Import & Export</h5>
+                        <a href="https://importexport.psns.ltd" target="_blank" class="btn btn-primary btn-lg btn-block">Explore</a>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
-                <a href="it-consultancy.html" class="btn btn-success btn-lg btn-block">IT Consultancy</a>
+                <div class="card mb-4">
+                    <img src="path/to/it-consultancy-image.jpg" class="card-img-top" alt="IT Consultancy">
+                    <div class="card-body">
+                        <h5 class="card-title">IT Consultancy</h5>
+                        <a href="https://itconsultancy.psns.ltd" target="_blank" class="btn btn-success btn-lg btn-block">Explore</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
