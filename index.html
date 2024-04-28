@@ -9,118 +9,153 @@
     <!-- Bootstrap CSS link -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kalam:wght@300;400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<style>
+    .star-field {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #4b79a1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #283e51,
+    #0a2342
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #283e51,
+    #0a2342
+  );
+}
+
+.star {
+  position: absolute;
+  width: 1px; /* Breite eines Sterns */
+  height: 1px; /* Höhe eines Sterns */
+  background-color: #766396; /* Farbe der Sterne (weiß) */
+  border-radius: 50%; /* Rundung für Sterneffekt */
+  animation: twinkling 3s infinite; /* Twinkle-Animation */
+}
+
+/* Keyframes für das Twinkling */
+@keyframes twinkling {
+  0% {
+    opacity: 0; /* Anfangsopazität auf 0 */
+  }
+  50% {
+    opacity: 1; /* Halbzeit mit voller Opazität */
+  }
+  100% {
+    opacity: 0; /* Endet mit 0 Opazität */
+  }
+}
+</style>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f9fa;
-            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+            font-family: "Quicksand", sans-serif !important;
         }
-        .content {
+        .hero-section {
+            height: 80vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0 15%;
+            background-color: #f8f9fa; /* Light gray background */
+            background: linear-gradient(45deg, #FFC107, #FF5722); /* Gradient background */
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-content {
             text-align: center;
         }
-        .company-icon {
-            max-width: 440px;
+        .hero-logo {
+            max-width: 180px; /* Adjust the size as needed */
+            margin: 25px 0;
+        }
+
+        .hero-btn{
+            margin: 25px 0;
+            background-color: #ffffff;
+            color: #000000 !important;
+        }
+
+        .hero-title {
+            font-size: 4rem; /* Large bold text */
+            font-weight: bold;
             margin-bottom: 20px;
+            color: #ffffff;
         }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .card-img-top {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            height: 200px;
-            object-fit: cover;
-        }
-        .btn-primary, .btn-success {
-            padding: 20px 40px;
-            font-size: 24px;
-            background-color: #23d1d1; /* Custom primary color */
-            border-color: #23d1d1; /* Match button border color with background */
-        }
-        .btn-primary:hover, .btn-success:hover {
-            background-color: #1aa8a8; /* Darker shade for hover effect */
-            border-color: #1aa8a8;
-        }
-
-        /* Media queries for responsiveness */
-        @media (max-width: 768px) {
-            .company-icon {
-                max-width: 100px;
-            }
-            .btn-primary, .btn-success {
-                padding: 15px 30px;
-                font-size: 20px;
-            }
-
-            h1{
-                font-size: 20px !important;
-            }
-
-            .card-img-top{
-                height: 120px !important;
-            }
-
-            .card-title{
-                font-size: 1rem !important;
-            }
-
-            .btn-primary, .btn-success {
-                padding: 8px 16px !important;
-                font-size: 14px !important;
-            }
-
-        }
-
-        @media (max-width: 576px) {
-            .company-icon {
-                max-width: 240pxpx;
-            }
-            .btn-primary, .btn-success {
-                padding: 12px 24px;
-                font-size: 18px;
-            }
+        .columns-section {
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* White background */
+            z-index: 999;
+    position: relative;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-    <div class="content">
-        <img src="logo.png" class="company-icon" alt="Company Icon">
-        <p class="lead">Explore our services:</p>
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6 col-6">
-                <div class="card mb-4">
-                    <img src="importexport.jpg" class="card-img-top" alt="Import & Export">
+
+    <div class="container-fluid">
+        <div class="star-field"></div>
+        <!-- Hero Section -->
+        <div class="row hero-section">
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="logo.png" class="hero-logo" alt="Company Logo">
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-end">
+                <button class="btn  hero-btn">Contact Us</button>
+            </div>
+            <div class="col-md-12 hero-content">
+                <h1 class="hero-title">Progressive Services & Solutions</h1>
+            </div>
+        </div>
+        <!-- Columns Section -->
+        <div class="row columns-section">
+            <div class="col-md-6">
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Import & Export</h5>
-                        <a href="https://importexport.psns.ltd" target="_blank" class="btn btn-primary btn-lg btn-block">Explore</a>
+                        <h5 class="card-title">Service 1</h5>
+                        <p class="card-text">Description of Service 1</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-6">
-                <div class="card mb-4">
-                    <img src="itconsultancy.jpg" class="card-img-top" alt="IT Consultancy">
+            <div class="col-md-6">
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">IT Consultancy</h5>
-                        <a href="https://itconsultancy.psns.ltd" target="_blank" class="btn btn-success btn-lg btn-block">Explore</a>
+                        <h5 class="card-title">Service 2</h5>
+                        <p class="card-text">Description of Service 2</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <!-- Bootstrap JS and dependencies (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
