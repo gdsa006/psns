@@ -15,7 +15,7 @@ for (let i = 0; i < numStars; i++) {
   // Zufällige Auswahl der Farbe für 20% der Sterne
   if (Math.random() < 0.1) {
     star.classList.add("colored-star");
-    const colors = ["yellow", "blue", "green", "purple", "pink"];
+    const colors = ["#e7762f", "#209dc3", "#20ebc5"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     star.style.backgroundColor = randomColor;
   }

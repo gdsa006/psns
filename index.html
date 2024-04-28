@@ -19,26 +19,17 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: #4b79a1; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #283e51,
-    #0a2342
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #283e51,
-    #0a2342
-  );
+  background: #f0f9f9; /* fallback for old browsers */
+
 }
 
 .star {
   position: absolute;
-  width: 1px; /* Breite eines Sterns */
-  height: 1px; /* Höhe eines Sterns */
-  background-color: #766396; /* Farbe der Sterne (weiß) */
-  border-radius: 50%; /* Rundung für Sterneffekt */
-  animation: twinkling 3s infinite; /* Twinkle-Animation */
+  width: 10px; /* Breite eines Sterns */
+  height: 10px; /* Höhe eines Sterns */
+  background-color: #1dc6c636; /* Farbe der Sterne (weiß) */
+  border-radius: 100%; /* Rundung für Sterneffekt */
+  animation: twinkling 2s infinite; /* Twinkle-Animation */
 }
 
 /* Keyframes für das Twinkling */
@@ -59,7 +50,7 @@
             font-family: "Quicksand", sans-serif !important;
         }
         .hero-section {
-            height: 80vh;
+            height: 65vh;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
@@ -92,18 +83,18 @@
 
         .hero-btn{
             margin: 25px 0;
-            background-color: #ffffff;
-            color: #000000 !important;
+            background-color: #e7762f;
+            color: #ffffff !important;
         }
 
         .hero-title {
-            font-size: 4rem; /* Large bold text */
-            font-weight: bold;
+            font-size: 3rem; /* Large bold text */
+            font-weight: bolder;
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #1dc6c6;
         }
         .columns-section {
-            height: 20vh;
+            height: 35vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -111,6 +102,67 @@
             z-index: 999;
     position: relative;
         }
+
+        .columns-section .card{
+            padding: 15px;
+            border: 0;
+        }
+
+        .columns-section .card img{
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .columns-section .card h2{
+            font-weight: bolder;
+            font-size: 1.3rem;
+            color: #1dc6c6;
+        }
+
+        .columns-section .card a{
+            color: #333;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        
+        .columns-section .card a:hover{
+            color: #e7762f;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    </style>
+
+    <style>
+        /* Default styles */
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .columns-section {
+        height: auto;
+    }
+
+    .card {
+        margin-bottom: 20px; 
+    }
+    
+    .hero-content{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 1.5rem; 
+    }
+}
     </style>
 </head>
 <body>
@@ -119,38 +171,71 @@
         <div class="star-field"></div>
         <!-- Hero Section -->
         <div class="row hero-section">
-            <div class="col-md-6 d-flex align-items-center">
+            <div class="col-md-6 col-6 d-flex align-items-center">
                 <img src="logo.png" class="hero-logo" alt="Company Logo">
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-end">
-                <button class="btn  hero-btn">Contact Us</button>
+            <div class="col-md-6 col-6 d-flex align-items-center justify-content-end">
+                <button class="btn hero-btn" data-toggle="modal" data-target="#contactModal">Contact Us</button>
             </div>
             <div class="col-md-12 hero-content">
-                <h1 class="hero-title">Progressive Services & Solutions</h1>
+                <h1 class="hero-title">Welcome to Progressive Services & Solutions</h1>
             </div>
         </div>
         <!-- Columns Section -->
         <div class="row columns-section">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Service 1</h5>
-                        <p class="card-text">Description of Service 1</p>
-                        <a href="#" class="btn btn-primary">Explore</a>
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="2150970186.webp" class="card-img" alt="Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Import & Export</h2>
+                                <p class="card-text">Efficient and reliable import/export services for your business needs. Streamline your international trade operations with our expert assistance.</p>
+                                <a href="#" class="">Explore</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Service 2</h5>
-                        <p class="card-text">Description of Service 2</p>
-                        <a href="#" class="btn btn-primary">Explore</a>
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="2151102468.webp" class="card-img" alt="Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">IT Consultancy</h2>
+                                <p class="card-text">Innovative IT consultancy services to help your business stay ahead in the digital age. From software development to cybersecurity, we've got you covered.</p>
+                                <a href="#" class="">Explore</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Add your contact information here -->
+              <p>Phone: +123456789</p>
+              <p>Email: info@example.com</p>
+              <p>Social Media: Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a>, and <a href="#">LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- Bootstrap JS and dependencies (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
