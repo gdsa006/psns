@@ -100,16 +100,28 @@
             text-shadow: 0px -5px 8px #00000087;
         }
 
-        @keyframes slide-in {
-        0% { transform: translateY(-100%); opacity: 0; } /* Start off the screen */
-        100% { transform: translateY(0); opacity: 1; } /* Slide in and fade in */
+       /* Define a keyframe animation called 'fade-in-out' */
+        @keyframes word-fade-in-out {
+        0% { opacity: 0; } /* Start with opacity 0 */
+        50% { opacity: 1; } /* Fade in */
+        100% { opacity: 0; } /* Fade out */
         }
 
-        /* Apply the animation to the .hero-title element */
-        .hero-title {
-        animation: slide-in 1.5s ease forwards; /* Use the 'slide-in' animation */
+        /* Apply the animation to each span element */
+        .hero-title span {
+        display: inline-block; /* Make each word appear on a new line */
+        animation: word-fade-in-out 3s ease infinite; /* Use the 'fade-in-out' animation */
         }
 
+        /* Delay each word's animation */
+        .hero-title span:nth-child(1) { animation-delay: 0s; }
+        .hero-title span:nth-child(2) { animation-delay: 0.5s; }
+        .hero-title span:nth-child(3) { animation-delay: 1s; }
+        .hero-title span:nth-child(4) { animation-delay: 1.5s; }
+        .hero-title span:nth-child(5) { animation-delay: 2s; }
+        .hero-title span:nth-child(6) { animation-delay: 2.5s; }
+        .hero-title span:nth-child(7) { animation-delay: 3s; }
+        
         .columns-section {
             height: 35vh;
             display: flex;
