@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kalam:wght@300;400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <meta charset="UTF-8">
 
 <style>
@@ -47,6 +49,79 @@
     opacity: 0; /* Endet mit 0 Opazität */
   }
 }
+
+#contactModal .modal-dialog .modal-content{
+    background-color: #1dc6c6;
+}
+
+#contactModal{
+    border-radius: 0;
+}
+
+#contactModal .modal-dialog .modal-content .modal-header{
+    border: 0;
+    text-align: center;
+}
+
+#contactModal .modal-dialog .modal-content .modal-header h5{
+    
+}
+
+#contactModal h5{
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 35px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1dc6c6;
+  }
+  .contact-link {
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  .contact-link i {
+    margin-right: 10px;
+  }
+
+  .contact-link:hover{
+    color: #ffffff;
+  }
+  .social-media-links {
+    display: flex;
+    justify-content: center;
+  }
+  .social-link {
+    margin: 0 15px;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .social-link:hover{
+    color: #ffffff;
+  }
+  .btn-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+  }
+  .modal-header {
+    border-bottom: 1px solid #dee2e6;
+  }
+  .modal-content {
+    border-radius: 8px;
+  }
+
 </style>
     <style>
         body {
@@ -159,6 +234,16 @@
             font-weight: 500;
             text-decoration: underline;
         }
+
+        .nav a{
+            color: #f1f1f1;
+        }
+
+        .nav a:hover{
+            color: #ffffff;
+        }
+
+        
     </style>
 
     <style>
@@ -211,7 +296,14 @@
                 <img src="logo.png" class="hero-logo" alt="Progressive Services & Solutions Logo">
             </div>
             <div class="col-md-6 col-6 d-flex align-items-center justify-content-end">
-                <button class="btn hero-btn" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+                <ul class="nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="our-journey.html">Our Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn hero-btn" data-toggle="modal" data-target="#contactModal" style="margin-left: 15px;">Contact Us</button>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-12 hero-content">
 <h1 class="hero-title">
@@ -265,17 +357,30 @@
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
+            
             <div class="modal-body">
-              <!-- Add your contact information here -->
-              <p>Whatsapp: <a href="https://wa.me/message/YLHWUO3P34M6P1" style="color: #1dc6c6">Live Chat</a></p>
-              <p>Email: support@psns.ltd</p>
-              <p style="display: none;">Social Media: Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a>, and <a href="#">LinkedIn</a></p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<h5>Contact Us</h5>
+              <!-- Contact Information with Icons -->
+              <div class="contact-info">
+                <a href="https://wa.me/message/YLHWUO3P34M6P1" class="contact-link whatsapp">
+                  <i class="fab fa-whatsapp"></i> Live Chat
+                </a>
+                <a href="mailto:support@psns.ltd" class="contact-link email">
+                  <i class="fas fa-envelope"></i> support@psns.ltd
+                </a>
+                <!-- Social Media Links -->
+                <div class="social-media-links">
+                  <a href="#" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-link twitter">
+                    <i class="fa-brands fa-x-twitter"></i>                  </a>
+                  <a href="#" class="social-link linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
