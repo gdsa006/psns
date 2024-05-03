@@ -177,8 +177,8 @@
 
 /* Define a keyframe animation called 'carousel' */
 @keyframes carousel {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
 }
 
 /* Apply styles to the container */
@@ -202,13 +202,6 @@
 .hero-title span:nth-child(5) { animation-delay: 8s; }
 .hero-title span:nth-child(6) { animation-delay: 10s; }
 .hero-title span:nth-child(7) { animation-delay: 12s; }
-
-/* Adjust the animation-timing-function for a smoother effect */
-@keyframes carousel {
-  0% { transform: translateX(100%); opacity: 0; }
-  10%, 90% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(-100%); opacity: 0; }
-}
 
         .columns-section {
             height: 35vh;
