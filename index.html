@@ -177,21 +177,20 @@
 
 /* Define a keyframe animation called 'carousel' */
 @keyframes carousel {
-  0% { opacity: 0; transform: translateY(-50%); }
-  20%, 80% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(50%); }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Apply styles to the container */
 .hero-title {
   overflow: hidden; /* Hide overflowing spans */
+  white-space: nowrap; /* Prevent spans from wrapping */
 }
 
 /* Apply styles to each span */
 .hero-title span {
-  display: block;
+  display: inline-block;
   opacity: 0; /* Start with opacity 0 */
-  position: relative; /* Positioning for animation */
   animation: carousel 10s infinite; /* Adjust timing as needed */
 }
 
@@ -204,6 +203,12 @@
 .hero-title span:nth-child(6) { animation-delay: 10s; }
 .hero-title span:nth-child(7) { animation-delay: 12s; }
 
+/* Adjust the animation-timing-function for a smoother effect */
+@keyframes carousel {
+  0% { transform: translateX(100%); opacity: 0; }
+  10%, 90% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
 
         .columns-section {
             height: 35vh;
