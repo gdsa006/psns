@@ -171,10 +171,37 @@
             font-size: 2.2rem; /* Large bold text */
             font-weight: bolder;
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #f0eed2;
             text-shadow: 0px -5px 8px #00000087;
         }
 
+/* Define a keyframe animation called 'zoom-wave' */
+@keyframes zoom-wave {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Apply styles to the container */
+.hero-title {
+  overflow: hidden; /* Hide overflowing spans */
+  white-space: nowrap; /* Prevent spans from wrapping */
+}
+
+/* Apply styles to each span */
+.hero-title span {
+  display: inline-block;
+  transform-origin: center; /* Set the transform origin to the center for zooming effect */
+  animation: zoom-wave 2s ease-in-out 1; /* Adjust timing as needed */
+}
+
+/* Delay each span's animation */
+.hero-title span:nth-child(1) { animation-delay: 0s; }
+.hero-title span:nth-child(2) { animation-delay: 0.1s; }
+.hero-title span:nth-child(3) { animation-delay: 0.2s; }
+.hero-title span:nth-child(4) { animation-delay: 0.3s; }
+.hero-title span:nth-child(5) { animation-delay: 0.4s; }
+.hero-title span:nth-child(6) { animation-delay: 0.5s; }
+.hero-title span:nth-child(7) { animation-delay: 0.6s; }
 
         .columns-section {
             height: 35vh;
@@ -276,13 +303,29 @@
             </div>
             <div class="col-md-6 col-6 d-flex align-items-center justify-content-end">
                 <ul class="nav align-items-center">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="our-journey.html">Our Journey</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <a class="dropdown-item" href="https://importexport.psns.ltd/" target="_blank">Import & Export</a>
+                            <a class="dropdown-item" href="https://itconsultancy.psns.ltd/" target="_blank">IT Consultancy</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
                     <li class="nav-item">
                         <button class="btn hero-btn" data-toggle="modal" data-target="#contactModal" style="margin-left: 15px;">Contact Us</button>
                     </li>
                 </ul>
+                
             </div>
             <div class="col-md-12 hero-content">
 <h1 class="hero-title">
