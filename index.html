@@ -323,7 +323,18 @@ filter: brightness(0) saturate(100%) invert(32%) sepia(46%) saturate(6715%) hue-
     color: #343A40;
 }
 
-
+#footer {
+      background-color: #343A40;
+      color: #FFFFFF;
+      padding-top: 20px;
+    }
+    #footer .list-unstyled li {
+      padding-bottom: 5px;
+    }
+    #footer .social-icons a {
+      color: #FFC107;
+      font-size: 24px;
+    }
 </style>
 
 </head>
@@ -515,6 +526,38 @@ filter: brightness(0) saturate(100%) invert(32%) sepia(46%) saturate(6715%) hue-
         </div>
     </section>
     
+
+    <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Home</a></li>
+                <li><a href="#" class="text-white">About Us</a></li>
+                <li><a href="#" class="text-white">Services</a></li>
+                <li><a href="#" class="text-white">Contact Us</a></li>
+                <li><a href="#" class="text-white">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Contact Information</h5>
+              <p>
+                123 Main Street<br>
+                City, State, Zip Code<br>
+                Phone: (123) 456-7890<br>
+                Email: info@example.com
+              </p>
+              <div class="social-icons">
+                <!-- Social media icons -->
+                <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
