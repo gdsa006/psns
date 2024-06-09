@@ -145,8 +145,6 @@
 }
 
 .about-card {
-    display: flex;
-    flex-direction: column;
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -154,14 +152,14 @@
     overflow: hidden;
 }
 
-.about-img {
-    width: 100%;
-    height: auto;
-}
-
-.about-content {
+.text-card .about-content {
     padding: 20px;
     text-align: center;
+}
+
+.image-card .about-img {
+    width: 100%;
+    height: auto;
 }
 
 .about-icon {
@@ -170,26 +168,25 @@
     margin-bottom: 15px;
 }
 
-.about-card h4 {
+.text-card h4 {
     font-size: 24px;
     color: #007BFF;
     margin-top: 0;
 }
 
-.about-card p {
+.text-card p {
     font-size: 16px;
     color: #343A40;
     line-height: 1.6;
 }
 
-/* Ensuring the grid layout mimics the provided image */
 .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
 }
 
-.col-md-6 {
+.col-md-4 {
     padding: 15px;
 }
 
@@ -355,8 +352,6 @@
             <a href="about-us.html" class="btn hero-btn">Learn More</a>
         </div>
     </section>
- 
-  
     <section id="about-us">
         <div class="container">
             <div class="row">
@@ -366,19 +361,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="about-card">
+                <!-- First Row -->
+                <div class="col-md-4">
+                    <div class="about-card text-card">
                         <div class="about-content">
                             <img src="icon-portfolio.png" alt="Our Portfolio" class="about-icon">
                             <h4>Our Portfolio</h4>
                             <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-card image-card">
                         <img src="path-to-image-1.jpg" alt="Our Portfolio" class="about-img">
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="about-card">
-                        <img src="path-to-image-2.jpg" alt="Our Services" class="about-img">
+                <div class="col-md-4">
+                    <div class="about-card text-card">
                         <div class="about-content">
                             <img src="icon-services.png" alt="Our Services" class="about-icon">
                             <h4>Our Services</h4>
@@ -388,24 +387,24 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="about-card">
+                <!-- Second Row -->
+                <div class="col-md-4">
+                    <div class="about-card image-card">
+                        <img src="path-to-image-2.jpg" alt="Our Services" class="about-img">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-card text-card">
                         <div class="about-content">
                             <img src="icon-company.png" alt="About Company" class="about-icon">
                             <h4>About Company</h4>
                             <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
                         </div>
-                        <img src="path-to-image-3.jpg" alt="About Company" class="about-img">
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="about-card">
-                        <img src="path-to-image-4.jpg" alt="Our Team" class="about-img">
-                        <div class="about-content">
-                            <img src="icon-team.png" alt="Our Team" class="about-icon">
-                            <h4>Our Team</h4>
-                            <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="about-card image-card">
+                        <img src="path-to-image-3.jpg" alt="About Company" class="about-img">
                     </div>
                 </div>
             </div>
