@@ -50,6 +50,16 @@
     display: none;
 }
 
+.hero-section .overlay .circle{
+    background-color: rgba(0, 123, 255, 0.7);
+    border-radius: 50%;
+}
+
+.hero-section .overlay .circle:nth-child(1){
+    height: 200px;
+    width: 200px;
+}
+
 .hero-section .container {
     position: relative;
     z-index: 1;
@@ -128,7 +138,11 @@
     
 
     <section class="hero-section" style="background-image: url('people-taking-part-high-protocol-event.jpg');">
-        <div class="overlay"></div>
+        <div class="overlay">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
         <div class="container text-center">
             <h1 class="hero-title">Transforming Visions into Reality Making Lasting Impact</h1>
             <p class="hero-subtitle">Efficient Solutions for Your Business Needs</p>
