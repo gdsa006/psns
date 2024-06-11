@@ -71,6 +71,10 @@
     #services-overview .col-md-6:last-child .service-card{
         margin-bottom: 0 !important;
     }
+
+    .navbar-logo{
+        max-height: 32px !important;
+    }
 }
 
   /* Tablet Styles */
