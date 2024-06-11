@@ -58,6 +58,10 @@
     .hero-btn{
         font-size: 13px !important;
     }
+
+    #about-us .text-card h4{
+        font-size: 16px;
+    }
 }
 
   /* Tablet Styles */
