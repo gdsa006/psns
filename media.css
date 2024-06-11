@@ -18,6 +18,10 @@
     .service-card p{
         font-size: 13px !important;
     }
+
+    #services-overview{
+        padding: 30px 0 !important;
+    }
 }
 
   /* Tablet Styles */
