@@ -67,6 +67,10 @@
     #about-us .text-card h4{
         font-size: 16px;
     }
+
+    #services-overview .col-md-6 .service-card{
+        margin-bottom: 0 !important;
+    }
 }
 
   /* Tablet Styles */
