@@ -26,6 +26,10 @@
     #services-overview{
         padding: 30px 0 !important;
     }
+
+    .service-card .icon{
+        flex: 20% !important;
+    }
 }
 
   /* Tablet Styles */
