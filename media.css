@@ -1,5 +1,11 @@
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
+    
+    .hero-section .overlay .circle:nth-child(1){
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
     .hero-title{
         font-size: 28px !important;
     }
@@ -42,6 +48,7 @@
     #footer p{
         font-size: 11px !important;
     }
+
 }
 
   /* Tablet Styles */
