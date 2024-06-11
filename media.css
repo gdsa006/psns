@@ -49,6 +49,7 @@
 
     .service-card .icon{
         flex: 20% !important;
+        display: none !important;
     }
 
     #footer p{
