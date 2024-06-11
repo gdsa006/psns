@@ -1,5 +1,13 @@
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
+    .hero-title{
+        font-size: 28px !important;
+    }
+
+    .hero-subtitle{
+        font-size: 14px !important;
+    }
+
     .hero-section {
         height: calc(100vh - 66px) !important;
     }
