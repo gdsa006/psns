@@ -68,7 +68,7 @@
         font-size: 16px;
     }
 
-    #services-overview .col-md-6 .service-card{
+    #services-overview .col-md-6:last-child .service-card{
         margin-bottom: 0 !important;
     }
 }
