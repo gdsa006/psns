@@ -7,6 +7,10 @@
     .section-heading{
         font-size: 22px !important;
     }
+
+    .text-muted{
+        font-size: 13px !important;
+    }
 }
 
   /* Tablet Styles */
