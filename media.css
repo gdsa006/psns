@@ -38,6 +38,10 @@
     .service-card .icon{
         flex: 20% !important;
     }
+
+    #footer p{
+        font-size: 11px !important;
+    }
 }
 
   /* Tablet Styles */
